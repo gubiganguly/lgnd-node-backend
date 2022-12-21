@@ -1,0 +1,43 @@
+### Get all media
+GET http://localhost:4000/api/media
+
+### Add media
+POST http://localhost:4000/api/media 
+Content-Type: application/json
+
+{
+    "title": "Witty & Wise Ganesh",
+    "thumbnail": "ganesh.jpg",
+    "producer": "Shemaroo kids",
+    "lessons": ["wits"],
+    "category": "Hinduism",
+    "file": "ganesh.mp4",
+    "description": " Goddess Parvati and Lord Shiva had two sons, Ganesha and Karthik. While Ganesha was a fat foodie, Karthik was adventurous and handsome. One day to decide who was the faster among the two, Ganesha and Karthik thought of having a contest. They decided that, both would take three rounds of the earth and the first one to touch the feet of their parents would be declared the winner. Watch to know what happens once Ganesha and Karthik set out on their adventurous journey.",
+    "rating": 4,
+    "type": "VIDEO"
+}
+
+### Get all videos
+GET http://localhost:4000/api/media/videos
+
+### Find media by id
+GET http://localhost:4000/api/media/63a2966819ae4aa47fc017a9
+
+### Find by search param
+POST http://localhost:4000/api/media/search
+Content-Type: application/json
+
+{
+    "producer": "Shemaroo kids"
+}
+
+### Update a media
+PUT http://localhost:4000/api/media/63a2966819ae4aa47fc017a9
+Content-Type: application/json
+
+{
+    "producer": "Tubi"
+}
+
+### Delete media
+DELETE http://localhost:4000/api/media/63a2959145f1a9539ba6e035

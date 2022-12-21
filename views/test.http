@@ -1,0 +1,20 @@
+### Find all views
+GET http://localhost:4000/api/views
+
+### Create a view
+POST http://localhost:4000/api/views
+Content-Type: application/json
+
+{
+    "content": "63a29410d7e1cb2cc73797c7",
+    "timestamp": 68,
+    "finished": false
+}
+
+
+### Find all media viewed by user
+GET http://localhost:4000/api/users/63a285c2b70e46a5d9ca0557/media
+
+
+### Find all users who view media
+GET http://localhost:4000/api/media/63a2a0cff7d88a8a3b86aeba/users
